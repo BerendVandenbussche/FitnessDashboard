@@ -17,6 +17,7 @@
 		FCDD49C325A35F7D001E53C1 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDD49C225A35F7D001E53C1 /* ComplicationController.swift */; };
 		FCDD49C525A35F7D001E53C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCDD49C425A35F7D001E53C1 /* Assets.xcassets */; };
 		FCDD49C825A35F7D001E53C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCDD49C725A35F7D001E53C1 /* Preview Assets.xcassets */; };
+		FCDD49DE25A36F48001E53C1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCDD49DC25A36EA2001E53C1 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,8 @@
 		FCDD49C725A35F7D001E53C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FCDD49C925A35F7D001E53C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCDD49CA25A35F7D001E53C1 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		FCDD49DC25A36EA2001E53C1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		FCDD49DD25A36F48001E53C1 /* FitnessDashboard WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "FitnessDashboard WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCDD49DE25A36F48001E53C1 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +99,7 @@
 				FCDD49AD25A35F7C001E53C1 /* FitnessDashboard WatchKit App */,
 				FCDD49B925A35F7D001E53C1 /* FitnessDashboard WatchKit Extension */,
 				FCDD49A625A35F7C001E53C1 /* Products */,
+				FCDD49DB25A36EA2001E53C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +125,7 @@
 		FCDD49B925A35F7D001E53C1 /* FitnessDashboard WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				FCDD49DD25A36F48001E53C1 /* FitnessDashboard WatchKit Extension.entitlements */,
 				FCDD49BA25A35F7D001E53C1 /* FitnessDashboardApp.swift */,
 				FCDD49BC25A35F7D001E53C1 /* ContentView.swift */,
 				FCDD49BE25A35F7D001E53C1 /* NotificationController.swift */,
@@ -139,6 +145,14 @@
 				FCDD49C725A35F7D001E53C1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FCDD49DB25A36EA2001E53C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCDD49DC25A36EA2001E53C1 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,6 +423,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "FitnessDashboard WatchKit Extension/FitnessDashboard WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FitnessDashboard WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 6N377BRGHL;
@@ -433,6 +448,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "FitnessDashboard WatchKit Extension/FitnessDashboard WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FitnessDashboard WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 6N377BRGHL;
