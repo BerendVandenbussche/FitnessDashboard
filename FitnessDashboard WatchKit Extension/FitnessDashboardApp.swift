@@ -6,16 +6,20 @@
 //
 
 import SwiftUI
+import HealthKit
 
 @main
 struct FitnessDashboardApp: App {
+    var workoutManager = WorkoutManager()
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView()
+                ContentView().environmentObject(workoutManager)
+                
             }
         }
 
         WKNotificationScene(controller: NotificationController.self, category: "myCategory")
     }
+   
 }

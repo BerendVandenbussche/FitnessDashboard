@@ -32,6 +32,20 @@
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.watchkit</string>
 	</dict>
+	<key>NSHealthClinicalHealthRecordsShareUsageDescription</key>
+	<string>Fitness Dashboard</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Fitness Dashboard</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Fitness Dashboard</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>healthkit</string>
+	</array>
+	<key>WKBackgroundModes</key>
+	<array>
+		<string>workout-processing</string>
+	</array>
 	<key>WKWatchOnly</key>
 	<true/>
 </dict>

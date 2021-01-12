@@ -1,0 +1,6 @@
+framework module Pods_FitnessDashboard {
+  umbrella header "Pods-FitnessDashboard-umbrella.h"
+
+  export *
+  module * { export * }
+}

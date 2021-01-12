@@ -6,25 +6,34 @@
 //
 
 import SwiftUI
+import HealthKit
+import WatchKit
 
 struct ContentView: View {
+    @EnvironmentObject var workoutSession: WorkoutManager
+    
     var body: some View {
-        VStack{
-            HStack{
-                Text("Fitness Dashboard")
+        NavigationView{
+            VStack(alignment: .leading){
+                Text("Dashboard")
                     .multilineTextAlignment(.leading)
-                Text("Battery")
-                    .multilineTextAlignment(.trailing)
-        }
             Spacer()
+            NavigationLink(
+                destination: WorkoutView()){Text("Start workout").onAppear(){self.workoutSession.requestAuthorization()}
+                
+            }
+            
+            
+            
  
     }
         
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(WorkoutManager())
     }
 }

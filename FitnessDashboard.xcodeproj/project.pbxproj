@@ -3,10 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E7C06774B0E4DF5AA3BC43B /* Pods_FitnessDashboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1712EFA583FC7DB0840A2B83 /* Pods_FitnessDashboard.framework */; };
+		A4B6A47978C2BA4C5C128835 /* Pods_FitnessDashboard_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C110000C8A3E3564487054 /* Pods_FitnessDashboard_WatchKit_Extension.framework */; };
+		DE365199DB44CC326E409112 /* Pods_FitnessDashboard_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B9C48FF2E3221940920E1F /* Pods_FitnessDashboard_WatchKit_App.framework */; };
+		FC38DD3125A759A900A6E948 /* BatteryMonitoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC38DD3025A759A900A6E948 /* BatteryMonitoring.swift */; };
+		FC45BFD125A7208400B58052 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC45BFD025A7208400B58052 /* WorkoutManager.swift */; };
+		FC45BFD725A732BF00B58052 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC45BFD625A732BF00B58052 /* WorkoutView.swift */; };
 		FCDD49AA25A35F7C001E53C1 /* FitnessDashboard WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FCDD49A925A35F7C001E53C1 /* FitnessDashboard WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FCDD49AF25A35F7D001E53C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCDD49AE25A35F7D001E53C1 /* Assets.xcassets */; };
 		FCDD49B625A35F7D001E53C1 /* FitnessDashboard WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FCDD49B525A35F7D001E53C1 /* FitnessDashboard WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -63,6 +69,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		00B9C48FF2E3221940920E1F /* Pods_FitnessDashboard_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitnessDashboard_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		124F3021B1D8ED6427999209 /* Pods-FitnessDashboard WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessDashboard WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-FitnessDashboard WatchKit Extension/Pods-FitnessDashboard WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		1712EFA583FC7DB0840A2B83 /* Pods_FitnessDashboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitnessDashboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B401ED2BE1121A3D1485B63 /* Pods-FitnessDashboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessDashboard.release.xcconfig"; path = "Target Support Files/Pods-FitnessDashboard/Pods-FitnessDashboard.release.xcconfig"; sourceTree = "<group>"; };
+		93921FBBE06100433B649F71 /* Pods-FitnessDashboard WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessDashboard WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-FitnessDashboard WatchKit App/Pods-FitnessDashboard WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		B5AF9AE5E0B791F9B4B1C863 /* Pods-FitnessDashboard WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessDashboard WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-FitnessDashboard WatchKit Extension/Pods-FitnessDashboard WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		E4C110000C8A3E3564487054 /* Pods_FitnessDashboard_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitnessDashboard_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC3D62964E7332238590EBC6 /* Pods-FitnessDashboard WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessDashboard WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-FitnessDashboard WatchKit App/Pods-FitnessDashboard WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		FC17E2FA45C807C3F02002D4 /* Pods-FitnessDashboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessDashboard.debug.xcconfig"; path = "Target Support Files/Pods-FitnessDashboard/Pods-FitnessDashboard.debug.xcconfig"; sourceTree = "<group>"; };
+		FC38DD3025A759A900A6E948 /* BatteryMonitoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryMonitoring.swift; sourceTree = "<group>"; };
+		FC45BFD025A7208400B58052 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		FC45BFD625A732BF00B58052 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
 		FCDD49A525A35F7C001E53C1 /* FitnessDashboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessDashboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCDD49A925A35F7C001E53C1 /* FitnessDashboard WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FitnessDashboard WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCDD49AE25A35F7D001E53C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,17 +100,47 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1F0D2B40C573E2360F3F93A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE365199DB44CC326E409112 /* Pods_FitnessDashboard_WatchKit_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2CBF29FB2DF2E8AD374A395 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E7C06774B0E4DF5AA3BC43B /* Pods_FitnessDashboard.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FCDD49B225A35F7D001E53C1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FCDD49DE25A36F48001E53C1 /* HealthKit.framework in Frameworks */,
+				A4B6A47978C2BA4C5C128835 /* Pods_FitnessDashboard_WatchKit_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		748489ABC4BADA8ADB6FAF5E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC17E2FA45C807C3F02002D4 /* Pods-FitnessDashboard.debug.xcconfig */,
+				3B401ED2BE1121A3D1485B63 /* Pods-FitnessDashboard.release.xcconfig */,
+				EC3D62964E7332238590EBC6 /* Pods-FitnessDashboard WatchKit App.debug.xcconfig */,
+				93921FBBE06100433B649F71 /* Pods-FitnessDashboard WatchKit App.release.xcconfig */,
+				124F3021B1D8ED6427999209 /* Pods-FitnessDashboard WatchKit Extension.debug.xcconfig */,
+				B5AF9AE5E0B791F9B4B1C863 /* Pods-FitnessDashboard WatchKit Extension.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FCDD499E25A35F7C001E53C1 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +148,7 @@
 				FCDD49B925A35F7D001E53C1 /* FitnessDashboard WatchKit Extension */,
 				FCDD49A625A35F7C001E53C1 /* Products */,
 				FCDD49DB25A36EA2001E53C1 /* Frameworks */,
+				748489ABC4BADA8ADB6FAF5E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +177,7 @@
 				FCDD49DD25A36F48001E53C1 /* FitnessDashboard WatchKit Extension.entitlements */,
 				FCDD49BA25A35F7D001E53C1 /* FitnessDashboardApp.swift */,
 				FCDD49BC25A35F7D001E53C1 /* ContentView.swift */,
+				FC45BFD625A732BF00B58052 /* WorkoutView.swift */,
 				FCDD49BE25A35F7D001E53C1 /* NotificationController.swift */,
 				FCDD49C025A35F7D001E53C1 /* NotificationView.swift */,
 				FCDD49C225A35F7D001E53C1 /* ComplicationController.swift */,
@@ -135,6 +185,8 @@
 				FCDD49C925A35F7D001E53C1 /* Info.plist */,
 				FCDD49CA25A35F7D001E53C1 /* PushNotificationPayload.apns */,
 				FCDD49C625A35F7D001E53C1 /* Preview Content */,
+				FC45BFD025A7208400B58052 /* WorkoutManager.swift */,
+				FC38DD3025A759A900A6E948 /* BatteryMonitoring.swift */,
 			);
 			path = "FitnessDashboard WatchKit Extension";
 			sourceTree = "<group>";
@@ -151,6 +203,9 @@
 			isa = PBXGroup;
 			children = (
 				FCDD49DC25A36EA2001E53C1 /* HealthKit.framework */,
+				1712EFA583FC7DB0840A2B83 /* Pods_FitnessDashboard.framework */,
+				00B9C48FF2E3221940920E1F /* Pods_FitnessDashboard_WatchKit_App.framework */,
+				E4C110000C8A3E3564487054 /* Pods_FitnessDashboard_WatchKit_Extension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -162,8 +217,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FCDD49D525A35F7D001E53C1 /* Build configuration list for PBXNativeTarget "FitnessDashboard" */;
 			buildPhases = (
+				1E22C83514AAC669E58C85F9 /* [CP] Check Pods Manifest.lock */,
 				FCDD49A325A35F7C001E53C1 /* Resources */,
 				FCDD49D425A35F7D001E53C1 /* Embed Watch Content */,
+				B2CBF29FB2DF2E8AD374A395 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -179,8 +236,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FCDD49D125A35F7D001E53C1 /* Build configuration list for PBXNativeTarget "FitnessDashboard WatchKit App" */;
 			buildPhases = (
+				202139C9309E26202025FB9A /* [CP] Check Pods Manifest.lock */,
 				FCDD49A725A35F7C001E53C1 /* Resources */,
 				FCDD49D025A35F7D001E53C1 /* Embed App Extensions */,
+				1F0D2B40C573E2360F3F93A1 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,9 +255,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FCDD49CD25A35F7D001E53C1 /* Build configuration list for PBXNativeTarget "FitnessDashboard WatchKit Extension" */;
 			buildPhases = (
+				884E4267FF4322FC67964E97 /* [CP] Check Pods Manifest.lock */,
 				FCDD49B125A35F7D001E53C1 /* Sources */,
 				FCDD49B225A35F7D001E53C1 /* Frameworks */,
 				FCDD49B325A35F7D001E53C1 /* Resources */,
+				E5A566E4D599408AA7B2DEF3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -220,9 +281,11 @@
 				TargetAttributes = {
 					FCDD49A425A35F7C001E53C1 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 					FCDD49A825A35F7C001E53C1 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 					FCDD49B425A35F7D001E53C1 = {
 						CreatedOnToolsVersion = 12.3;
@@ -276,12 +339,101 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1E22C83514AAC669E58C85F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FitnessDashboard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		202139C9309E26202025FB9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FitnessDashboard WatchKit App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		884E4267FF4322FC67964E97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FitnessDashboard WatchKit Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5A566E4D599408AA7B2DEF3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitnessDashboard WatchKit Extension/Pods-FitnessDashboard WatchKit Extension-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitnessDashboard WatchKit Extension/Pods-FitnessDashboard WatchKit Extension-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FitnessDashboard WatchKit Extension/Pods-FitnessDashboard WatchKit Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FCDD49B125A35F7D001E53C1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FCDD49BF25A35F7D001E53C1 /* NotificationController.swift in Sources */,
+				FC45BFD125A7208400B58052 /* WorkoutManager.swift in Sources */,
+				FC45BFD725A732BF00B58052 /* WorkoutView.swift in Sources */,
+				FC38DD3125A759A900A6E948 /* BatteryMonitoring.swift in Sources */,
 				FCDD49BD25A35F7D001E53C1 /* ContentView.swift in Sources */,
 				FCDD49C325A35F7D001E53C1 /* ComplicationController.swift in Sources */,
 				FCDD49BB25A35F7D001E53C1 /* FitnessDashboardApp.swift in Sources */,
@@ -421,6 +573,7 @@
 		};
 		FCDD49CE25A35F7D001E53C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 124F3021B1D8ED6427999209 /* Pods-FitnessDashboard WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "FitnessDashboard WatchKit Extension/FitnessDashboard WatchKit Extension.entitlements";
@@ -446,6 +599,7 @@
 		};
 		FCDD49CF25A35F7D001E53C1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5AF9AE5E0B791F9B4B1C863 /* Pods-FitnessDashboard WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "FitnessDashboard WatchKit Extension/FitnessDashboard WatchKit Extension.entitlements";
@@ -471,18 +625,26 @@
 		};
 		FCDD49D225A35F7D001E53C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC3D62964E7332238590EBC6 /* Pods-FitnessDashboard WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6N377BRGHL;
 				IBSC_MODULE = FitnessDashboard_WatchKit_Extension;
 				INFOPLIST_FILE = "FitnessDashboard WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Berend.FitnessDashboard.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 7.2;
@@ -491,14 +653,21 @@
 		};
 		FCDD49D325A35F7D001E53C1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93921FBBE06100433B649F71 /* Pods-FitnessDashboard WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6N377BRGHL;
 				IBSC_MODULE = FitnessDashboard_WatchKit_Extension;
 				INFOPLIST_FILE = "FitnessDashboard WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Berend.FitnessDashboard.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -511,23 +680,38 @@
 		};
 		FCDD49D625A35F7D001E53C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC17E2FA45C807C3F02002D4 /* Pods-FitnessDashboard.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6N377BRGHL;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Berend.FitnessDashboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		FCDD49D725A35F7D001E53C1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B401ED2BE1121A3D1485B63 /* Pods-FitnessDashboard.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6N377BRGHL;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Berend.FitnessDashboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
