@@ -9,28 +9,34 @@ import SwiftUI
 import UIKit
 import SocketIO
 
+let manager:SocketManager = SocketManager(socketURL: URL(string: "ws://192.168.0.191:8080")!, config: [.log(true), .compress])
+let socket = manager.defaultSocket
+
 struct WorkoutView: View {
     @EnvironmentObject var workoutSession: WorkoutManager
     
-    func handleData(){
-        let manager = SocketManager(socketURL: URL(string: "http://192.168.0.191:5000")!, config: [.log(true), .compress])
-        let socket = manager.defaultSocket
-        
+    func connectSocketAndStartWorkout(){
+        workoutSession.startWorkout()
+        socket.connect()
+    }
+    
+    func handleDataSocketIO(){
         socket.on(clientEvent: .connect) {data, ack in
             print("socket connected")
         }
-        
-        socket.on("apple_watch_data") {data, ack in
-            guard let heartrate = workoutSession.heartrate as? Double else { return }
-            
-            socket.emitWithAck("canUpdate", heartrate).timingOut(after: 0) {data in
-                socket.emit("apple_watch_data", ["heartrate": heartrate])
-            }
 
-            ack.with("Got your heartrate", "dude")
-        }
+        let heartrate = workoutSession.heartrate
+        let calories = workoutSession.activeCalories
+        let distance = workoutSession.distance
+        let time = elapsedTimeString(elapsed: secondsToHoursMinutesSeconds(seconds: workoutSession.elapsedSeconds))
+        socket.emit("watchData", ["heartrate": heartrate, "calories": calories, "distance": distance, "time": time])
 
-        socket.connect()
+
+    }
+    
+    func endWorkout(){
+        workoutSession.endWorkout()
+        socket.disconnect()
     }
     
     var body: some View {
@@ -43,7 +49,7 @@ struct WorkoutView: View {
             }
             // The workout elapsed time.
             Text("\(elapsedTimeString(elapsed: secondsToHoursMinutesSeconds(seconds: workoutSession.elapsedSeconds)))").frame(alignment: .leading)
-                .font(Font.system(size: 26, weight: .semibold, design: .default).monospacedDigit())
+                .font(Font.system(size: 26, weight: .semibold, design: .default).monospacedDigit()).onChange(of: workoutSession.elapsedSeconds){newValue in handleDataSocketIO()}
                 
             //Calories burned.
             Text("\(workoutSession.activeCalories, specifier: "%.1f") cal")
@@ -52,7 +58,7 @@ struct WorkoutView: View {
             
             //Heartrate.
             Text("\(workoutSession.heartrate, specifier: "%.1f") BPM")
-                .font(Font.system(size: 26, weight: .regular, design: .default).monospacedDigit()).onAppear(){handleData()}
+                .font(Font.system(size: 26, weight: .regular, design: .default).monospacedDigit())
             
             //Distance
             Text("\(workoutSession.distance, specifier: "%.1f") m")
@@ -65,9 +71,9 @@ struct WorkoutView: View {
                 label: {
                     Text("End workout")
                 }
-            ).simultaneousGesture(TapGesture().onEnded{workoutSession.endWorkout()})
+            ).simultaneousGesture(TapGesture().onEnded{endWorkout()})
              
-        }}.onAppear(){workoutSession.startWorkout()}
+        }}.onAppear(){connectSocketAndStartWorkout()}
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .leading)
     }
     

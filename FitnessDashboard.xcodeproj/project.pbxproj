@@ -24,6 +24,7 @@
 		FCDD49C525A35F7D001E53C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCDD49C425A35F7D001E53C1 /* Assets.xcassets */; };
 		FCDD49C825A35F7D001E53C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCDD49C725A35F7D001E53C1 /* Preview Assets.xcassets */; };
 		FCDD49DE25A36F48001E53C1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCDD49DC25A36EA2001E53C1 /* HealthKit.framework */; };
+		FCF418D925AF3B06003BAAC1 /* Socketio.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF418D825AF3B06003BAAC1 /* Socketio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		FCDD49CA25A35F7D001E53C1 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		FCDD49DC25A36EA2001E53C1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		FCDD49DD25A36F48001E53C1 /* FitnessDashboard WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "FitnessDashboard WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		FCF418D825AF3B06003BAAC1 /* Socketio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socketio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 		FCDD499E25A35F7C001E53C1 = {
 			isa = PBXGroup;
 			children = (
+				FCF418D825AF3B06003BAAC1 /* Socketio.swift */,
 				FCDD49AD25A35F7C001E53C1 /* FitnessDashboard WatchKit App */,
 				FCDD49B925A35F7D001E53C1 /* FitnessDashboard WatchKit Extension */,
 				FCDD49A625A35F7C001E53C1 /* Products */,
@@ -433,6 +436,7 @@
 				FCDD49BF25A35F7D001E53C1 /* NotificationController.swift in Sources */,
 				FC45BFD125A7208400B58052 /* WorkoutManager.swift in Sources */,
 				FC45BFD725A732BF00B58052 /* WorkoutView.swift in Sources */,
+				FCF418D925AF3B06003BAAC1 /* Socketio.swift in Sources */,
 				FC38DD3125A759A900A6E948 /* BatteryMonitoring.swift in Sources */,
 				FCDD49BD25A35F7D001E53C1 /* ContentView.swift in Sources */,
 				FCDD49C325A35F7D001E53C1 /* ComplicationController.swift in Sources */,
