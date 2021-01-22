@@ -14,6 +14,15 @@ let socket = manager.defaultSocket
 
 struct WorkoutView: View {
     @EnvironmentObject var workoutSession: WorkoutManager
+    @ObservedObject var locationManager = LocationManager()
+    
+    var userLatitude: String {
+            return "\(locationManager.lastLocation?.coordinate.latitude ?? 0)"
+        }
+
+    var userLongitude: String {
+            return "\(locationManager.lastLocation?.coordinate.longitude ?? 0)"
+        }
     
     func connectSocketAndStartWorkout(){
         workoutSession.startWorkout()
@@ -29,7 +38,7 @@ struct WorkoutView: View {
         let calories = workoutSession.activeCalories
         let distance = workoutSession.distance
         let time = elapsedTimeString(elapsed: secondsToHoursMinutesSeconds(seconds: workoutSession.elapsedSeconds))
-        socket.emit("watchData", ["heartrate": heartrate, "calories": calories, "distance": distance, "time": time])
+        socket.emit("watchData", ["heartrate": heartrate, "calories": calories, "distance": distance, "time": time, "latitude": userLatitude, "longitude": userLongitude])
 
 
     }

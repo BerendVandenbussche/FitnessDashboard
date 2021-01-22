@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="1f322690-d6cb-4c41-be2d-9cbae05d0c76" name="Linux-Berend">
+        <fileTransfer rootFolder="/home/berend" accessType="SFTP" host="192.168.0.150" port="22" sshConfigId="3f1ec99c-92ba-4d64-b1b3-5c63717862a5" sshConfig="berend@192.168.0.150:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

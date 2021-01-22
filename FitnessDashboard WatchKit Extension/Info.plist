@@ -38,6 +38,8 @@
 	<string>Fitness Dashboard</string>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string>Fitness Dashboard</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Fitness Dashboard</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>healthkit</string>

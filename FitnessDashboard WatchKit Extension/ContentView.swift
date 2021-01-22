@@ -11,6 +11,11 @@ import WatchKit
 
 struct ContentView: View {
     @EnvironmentObject var workoutSession: WorkoutManager
+    @ObservedObject var locationManager = LocationManager()
+    
+    func getAuthorized(){
+        self.workoutSession.requestAuthorization()
+    }
     
     var body: some View {
         NavigationView{
@@ -19,7 +24,7 @@ struct ContentView: View {
                     .multilineTextAlignment(.leading)
             Spacer()
             NavigationLink(
-                destination: WorkoutView()){Text("Start workout").onAppear(){self.workoutSession.requestAuthorization()}
+                destination: WorkoutView()){Text("Start workout").onAppear(){getAuthorized()}
                 
             }
             
