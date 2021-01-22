@@ -71,7 +71,7 @@ class WorkoutManager: NSObject, ObservableObject {
         /// - Tag: WorkoutConfiguration
         let configuration = HKWorkoutConfiguration()
         configuration.activityType = .running
-        configuration.locationType = .indoor
+        configuration.locationType = .outdoor
         
         return configuration
     }

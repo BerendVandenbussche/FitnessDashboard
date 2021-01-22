@@ -14,6 +14,7 @@ CORS(app)
 socketio = SocketIO(app)
 endpoint = "/api/v1"
 
+connected = False
 time = None
 heartrate = None
 distance = None
@@ -24,12 +25,12 @@ longitude = None
 @app.route(endpoint + "/watchdata", methods=["GET"])
 def get_watch_data():
     if request.method == "GET":
-        return {"time" : time, "heartrate": heartrate, "distance": distance, "calories": calories, "latitude": latitude, "longitude": longitude}
+        return {"time" : time, "heartrate": heartrate, "distance": distance, "calories": calories, "latitude": latitude, "longitude": longitude, "connected": connected}
 
 
 async def watchData(websocket, path):
     while True:
-        await websocket.send(json.dumps({"time" : time, "heartrate": heartrate, "distance": distance, "calories": calories, "latitude": latitude, "longitude": longitude}))
+        await websocket.send(json.dumps({"time" : time, "heartrate": heartrate, "distance": distance, "calories": calories, "latitude": latitude, "longitude": longitude, "connected": connected}))
         await asyncio.sleep(1)
 
 
@@ -47,11 +48,15 @@ t.start()
 
 @socketio.on("connect")
 def connected():
+    global connected
+    connected = True
     print("Client connected")
 
 
 @socketio.on("disconnect")
 def disconnected():
+    global connected
+    connected = False
     print("Client disconnected")
 
 

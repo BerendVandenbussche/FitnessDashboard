@@ -21,11 +21,12 @@ export function Map() {
     width: '50px',
   };
 
-  const Marker = ({ title }) => (
-    <div style={markerStyle}>
-      <img style={imgStyle} src="/Assets/Location.png" alt={title} />
-    </div>
-  );
+  const textStyle = {
+    height: '50px',
+    width: '500px',
+  };
+
+  const Marker = ({ title }) => <div style={response.connected ? markerStyle : textStyle}>{response.connected ? <img style={imgStyle} src="/Assets/Location.png" alt={title} /> : <h3 className="text-white text-3xl bg-red-500">⚠️ Apple watch not connected ⚠️</h3>}</div>;
 
   const initializeWebsocket = () => {
     const ws = new WebSocket('ws://192.168.0.191:9000');
