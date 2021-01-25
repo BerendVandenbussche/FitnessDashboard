@@ -38,7 +38,7 @@ function App() {
               <div></div>
             ) : (
               <div className="w-full h-full flex flex-col justify-center items-center mt-5 lg:mt-0">
-                <h3 className="text-9xl">⚠️</h3>
+                <h3 className="text-white text-9xl">⚠️</h3>
                 <h3 className="text-white text-lg">Apple watch is not connected</h3>
               </div>
             )}

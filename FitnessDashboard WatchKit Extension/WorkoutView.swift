@@ -9,12 +9,13 @@ import SwiftUI
 import UIKit
 import SocketIO
 
-let manager:SocketManager = SocketManager(socketURL: URL(string: "ws://192.168.0.191:8080")!, config: [.log(true), .compress])
+let manager = SocketManager(socketURL: URL(string: "ws://192.168.0.191:8080")!, config: [.log(true), .compress, .forceNew(true)])
 let socket = manager.defaultSocket
 
 struct WorkoutView: View {
     @EnvironmentObject var workoutSession: WorkoutManager
     @ObservedObject var locationManager = LocationManager()
+    
     
     var userLatitude: String {
             return "\(locationManager.lastLocation?.coordinate.latitude ?? 0)"
