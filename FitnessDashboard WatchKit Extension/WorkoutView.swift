@@ -9,7 +9,7 @@ import SwiftUI
 import UIKit
 import SocketIO
 
-let manager = SocketManager(socketURL: URL(string: "ws://192.168.0.191:8080")!, config: [.log(true), .compress, .forceNew(true)])
+let manager = SocketManager(socketURL: URL(string: "ws://192.168.0.120:8080")!, config: [.log(true), .compress, .forceNew(true)])
 let socket = manager.defaultSocket
 
 struct WorkoutView: View {
@@ -39,7 +39,8 @@ struct WorkoutView: View {
         let calories = workoutSession.activeCalories
         let distance = workoutSession.distance
         let time = elapsedTimeString(elapsed: secondsToHoursMinutesSeconds(seconds: workoutSession.elapsedSeconds))
-        socket.emit("watchData", ["heartrate": heartrate, "calories": calories, "distance": distance, "time": time, "latitude": userLatitude, "longitude": userLongitude])
+        let battery = String(BatteryMonitoring().level) + "%"
+        socket.emit("watchData", ["heartrate": heartrate, "calories": calories, "distance": distance, "time": time, "latitude": userLatitude, "longitude": userLongitude, "battery": battery])
 
 
     }
